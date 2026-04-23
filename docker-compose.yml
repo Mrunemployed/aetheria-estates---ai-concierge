@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      target: development
+    ports:
+      - "3000:3000"
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      DISABLE_HMR: ${DISABLE_HMR:-false}
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    command: npm run dev
