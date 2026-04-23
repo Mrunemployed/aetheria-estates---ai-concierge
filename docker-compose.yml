@@ -4,7 +4,7 @@ services:
       context: .
       target: development
     ports:
-      - "3000:3000"
+      - "3000:3002"
     environment:
       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       DISABLE_HMR: ${DISABLE_HMR:-false}
